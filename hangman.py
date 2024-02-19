@@ -1,6 +1,7 @@
 import pyfiglet
 import cowsay
 import random
+from sys 
 
 project = pyfiglet.figlet_format("HangMan")
 print(project)
@@ -96,6 +97,7 @@ while count < 6:
 
         if emptyString == selectedWord:
             cowsay.milk(f"You have saved your life in {sucess} attempts.")
+            sys.exit("Good Bye")
     else:
         count += 1
         print(hangMan[count])
@@ -103,3 +105,4 @@ while count < 6:
         print(f"\n\n You have {totalLives} chances left.")
         if totalLives == 0:
             cowsay.dragon(f"Now, You are Dead.")
+            sys.exit("No one can save you in our World.\n\n")
